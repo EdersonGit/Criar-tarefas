@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #6200ea;
+    padding: 20px;
+    text-align: center;
+}
+
+header input {
+    width: 100%;
+    max-width: 600px;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarefas {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#tarefas h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    color: #6200ea;
+    margin-bottom: 20px;
+}
+
+#tarefas h2 button {
+    height: 40px;
+    background-color: #6200ea;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .75px;
+    padding: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+#tarefas h2 button:hover {
+    background-color: #3700b3;
+}
+
+#tarefas h6 {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    margin-top: 20px;
+}
+
+#tarefas ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+#tarefas ul li {
+    flex: 1 1 calc(25% - 16px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 200ms;
+}
+
+#tarefas ul li:hover {
+    transform: translateY(-5px);
+}
+
+#tarefas ul li h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#tarefas ul li p {
+    font-size: 14px;
+    color: #666;
+}
+
+#tarefas ul li .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    cursor: pointer;
+    fill: #999;
+}
+
+#tarefas ul li .actions box-icon:hover {
+    fill: #6200ea;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 200ms, opacity 200ms;
+}
+
+#overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 200ms, opacity 200ms;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal form h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal form h3 box-icon {
+    fill: #999;
+    cursor: pointer;
+}
+
+.modal form h3 box-icon:hover {
+    fill: #6200ea;
+}
+
+.modal form label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .75px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.modal form input, 
+.modal form textarea {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #dedede;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+    font-size: 14px;
+    transition: border-color 200ms;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+    border-color: #6200ea;
+}
+
+.modal form textarea {
+    padding-top: 10px;
+    height: 100px;
+    resize: none;
+}
+
+.modal form button {
+    width: 100%;
+    height: 40px;
+    background-color: #6200ea;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .75px;
+    padding: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.modal form button:hover {
+    background-color: #3700b3;
+}
+
+.oculto {
+    display: none;
+}
